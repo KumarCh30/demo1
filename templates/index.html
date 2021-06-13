@@ -1,0 +1,156 @@
+
+<!-- This is GUI for Phising attack Detection Application Using Machine Learning Classifer -->
+
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+
+  <style>
+    /* CSS code for button */
+    body {
+      background-image: url('static/images/project.png');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+
+    /* CSS code for button */
+    .button_css {
+    color: #494949 !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #ffffff;
+    padding: 20px;
+    border: 4px solid #494949 !important;
+    display: inline-block;
+    transition: all 0.4s ease 0s;
+    }
+    
+    .button_css:hover {
+    color: #ffffff !important;
+    background: #f6b93b;
+    border-color: #f6b93b !important;
+    transition: all 0.4s ease 0s;
+    }
+  </style>
+
+</head>
+
+<body>
+
+ 
+ 
+ <div class="login">
+	
+    <!-- Get input for predict the  Phising Site -->
+    <center>
+         <br>
+            <br>
+               <br>
+                  <br>
+    <form action="{{ url_for('predict')}}"method="post">
+       
+          <br>
+            <br>
+              <br>
+                <br>
+                  <br>
+                    <br>
+                      <br>
+                        <br>
+                          <br>
+                           <br>
+                            <br>
+                             <br>
+                              <br>
+                               <br>
+                                <br>
+                                 <br>
+                                  <br>
+                                   <br>
+                                    <br>
+                                     <br>
+                                      <br>
+                                        <br>
+                                        
+                                    
+
+        <h1>Enter the value of Phising features >>></h1>
+        
+    	<input type="text" name="having_IP_Address" placeholder="having_IP_Address" required="required" />
+        <input type="text" name="URL_Length" placeholder="URL_Length" required="required" />
+		<input type="text" name="Shortining_Service" placeholder="Shortining_Service" required="required" />
+        <input type="text" name="having_At_Symbol" placeholder="having_At_Symbol" required="required" />
+            <input type="text" name="double_slash_redirecting" placeholder="double_slash_redirecting" required="required" />
+		
+        
+
+		<br>
+    	<input type="text" name="Prefix_Suffix" placeholder="Prefix_Suffix" required="required" />
+        <input type="text" name="having_Sub_Domain" placeholder="having_Sub_Domain" required="required" />
+		<input type="text" name="SSLfinal_State" placeholder="SSLfinal_State" required="required" />
+        <input type="text" name="Domain_registeration_length" placeholder="Domain_registeration_length" required="required" />
+            <input type="text" name="Favicon" placeholder="Favicon" required="required" />
+    	
+        
+		
+		<br>
+    	<input type="text" name="port" placeholder="port" required="required" />
+        <input type="text" name="HTTPS_token" placeholder="HTTPS_token" required="required" />
+		<input type="text" name="Request_URL" placeholder="Request_URL" required="required" />
+        <input type="text" name="URL_of_Anchor" placeholder="URL_of_Anchor" required="required" />
+            <input type="text" name="Links_in_tags" placeholder="Links_in_tags" required="required" />
+    	
+        
+		
+    	<br>
+    	<input type="text" name="SFH" placeholder="SFH" required="required" />
+        <input type="text" name="Submitting_to_email" placeholder="Submitting_to_email" required="required" />
+		<input type="text" name="Abnormal_URL" placeholder="Abnormal_URL" required="required" />
+        <input type="text" name="Redirect" placeholder="Redirect" required="required" />
+    <input type="text" name="on_mouseover" placeholder="on_mouseover" required="required" />
+    	
+        
+			<br>
+
+
+      
+      <input type="text" name="RightClick" placeholder="RightClick" required="required" />
+        <input type="text" name="popUpWidnow" placeholder="popUpWidnow" required="required" />
+    <input type="text" name="Iframe" placeholder="Iframe" required="required" />
+        <input type="text" name="age_of_domain" placeholder="age_of_domain" required="required" />
+    <input type="text" name="DNSRecord" placeholder="DNSRecord" required="required" />
+      
+        
+      <br>
+      <input type="text" name="web_traffic" placeholder="web_traffic" required="required" />
+      <input type="text" name="Page_Rank" placeholder="Page_Rank" required="required" />
+      <input type="text" name="Google_Index" placeholder="Google_Index" required="required" />
+      <input type="text" name="Links_pointing_to_page" placeholder="Links_pointing_to_page" required="required" />
+      <input type="text" name="Statistical_report" placeholder="Statistical_report" required="required" />
+      <br>
+
+
+      
+        
+        <!-- Show button -->
+        <div class="button_cont" align="center"><a class="button_css" href="https://github.com/prem-creator/heart-detector.git" target="_blank" rel="nofollow noopener">
+            <button type="submit" class="btn btn-primary btn-block btn-large"><strong>Predict Phising Attack</strong></button></a>
+        </div>
+        
+    </form>
+    </center>
+   
+   <!-- Show predicted output using ML model --> 
+   <div>
+       <center>
+   <h1>{{ prediction_text }}</h1>
+       </center>
+   </div>
+
+ </div>
+
+</body>
+</html>
